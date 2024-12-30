@@ -51,14 +51,14 @@ export default function AuthForm({ type }: AuthFormProps) {
                         <input
                             type="email"
                             placeholder="Email address"
-                            className=" border border-gray-300 rounded px-4 py-2 w-full outline-none"
+                            className=" border border-gray-300 rounded px-4 py-2 w-full focus:outline-none focus:bg-white"
                         />
                     </div>
                     <div>
                         <input
                             type="password"
                             placeholder="Password"
-                            className="border border-gray-300 rounded px-4 py-2 w-full"
+                            className="border border-gray-300 rounded px-4 py-2 w-full focus:outline-none focus:bg-white"
                         />
                     </div>
                     {!isSignIn && (
@@ -66,7 +66,7 @@ export default function AuthForm({ type }: AuthFormProps) {
                             <input
                                 type="password"
                                 placeholder="Repeat password"
-                                className="border border-gray-300 rounded px-4 py-2 w-full"
+                                className="border border-gray-300 rounded px-4 py-2 w-full focus:outline-none focus:bg-white"
                             />
                         </div>
                     )}
