@@ -1,5 +1,8 @@
+import google from '@/public/google.svg';
+import apple from '@/public/apple.svg';
+import Image from 'next/image';
 interface AuthFormProps {
-    type:"sign-in" | "sign-up";
+    type: "sign-in" | "sign-up";
 }
 
 export default function AuthForm({ type }: AuthFormProps) {
@@ -36,29 +39,40 @@ export default function AuthForm({ type }: AuthFormProps) {
                     }
                 </p>
                 <div className="flex gap-4 mb-6 w-full">
-                    <button className="bg-zinc-50 border border-gray-300 rounded px-4 py-2 w-full">
+                    <button className="bg-zinc-50 border border-gray-300 rounded px-4 py-2 w-full flex items-center justify-center gap-2">
+                        <Image
+                            src={google}
+                            alt="Google"
+                            width={24}
+                        />
                         Google
                     </button>
-                    <button className="bg-zinc-50 border border-gray-300 rounded px-4 py-2 w-full">
+                    <button className="bg-zinc-50 border border-gray-300 rounded px-4 py-2 w-full flex items-center justify-center gap-2">
+                        <Image
+                            src={apple}
+                            alt="Apple"
+                            width={24}
+
+                        />
                         Apple
                     </button>
                 </div>
                 <p className="text-sm text-gray-500 mb-4">
                     Or {isSignIn ? "log in" : "sign up"} with your email address:
                 </p>
-                <form className="space-y-4">
+                <form className="">
                     <div>
                         <input
                             type="email"
                             placeholder="Email address"
-                            className=" border border-gray-300 rounded px-4 py-2 w-full focus:outline-none focus:bg-white"
+                            className=" border border-gray-300 rounded px-4 py-2 w-full focus:outline-none focus:bg-white mb-2"
                         />
                     </div>
                     <div>
                         <input
                             type="password"
                             placeholder="Password"
-                            className="border border-gray-300 rounded px-4 py-2 w-full focus:outline-none focus:bg-white"
+                            className="border border-gray-300 rounded px-4 py-2 w-full focus:outline-none focus:bg-white mb-2"
                         />
                     </div>
                     {!isSignIn && (
@@ -66,13 +80,18 @@ export default function AuthForm({ type }: AuthFormProps) {
                             <input
                                 type="password"
                                 placeholder="Repeat password"
-                                className="border border-gray-300 rounded px-4 py-2 w-full focus:outline-none focus:bg-white"
+                                className="border border-gray-300 rounded px-4 py-2 w-full focus:outline-none focus:bg-white mb-2"
                             />
                         </div>
                     )}
                     <button className="bg-blue-500 text-white rounded px-4 py-2 w-full">
                         {isSignIn ? "Sign in" : "Create an account"}
                     </button>
+                    <p 
+                        className='text-gray-600 text-sm mb-2'
+                    >
+                        This site is protected by reCAPTCHA and the Google Privacy Policy. 
+                    </p>
                 </form>
             </div>
         </div>
