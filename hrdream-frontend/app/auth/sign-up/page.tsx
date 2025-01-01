@@ -1,5 +1,5 @@
-import LeftPane from "@/components/LeftPane";
-import AuthForm from "@/components/AuthForm";
+import LeftPane from "@/components/auth/LeftPane";
+import AuthForm from "@/components/auth/AuthForm";
 
 export default function SignUp() {
   return (
