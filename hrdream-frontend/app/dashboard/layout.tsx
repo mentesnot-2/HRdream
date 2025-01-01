@@ -10,7 +10,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
       </div>
       <div className="flex flex-col w-4/5 h-screen">
         <Header />
-        <main className="bg-white">{children}</main>
+        <main className="bg-white overflow-y-auto">{children}</main>
       </div>
     </div>
   );
