@@ -14,7 +14,7 @@ const eventsData: Event[] = [
     },
     {
         date: "06",
-        title: "Interaction design",
+        title: "Interaction design", 
         details: "8 of 12 sessions, Mrs. Wilson",
         time: "11:00-14:45",
     },

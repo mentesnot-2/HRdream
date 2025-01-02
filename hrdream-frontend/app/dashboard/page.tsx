@@ -1,14 +1,14 @@
 
-import ProfilePage from "@/components/profile/profileLeft/page"
-import ProfilePages from "@/components/profile/profileRight/page"
+import ProfilePageRight from "@/components/profile/profileRight/page"
+import ProfilePageLeft from "@/components/profile/profileLeft/page"
 
 
 export default function DashboardPage() {
     return (
 
         <div className=" bg-white flex w-full">
-            <ProfilePages />
-            <ProfilePage/>
+            <ProfilePageLeft />
+            <ProfilePageRight />
         </div>
     )
 }
