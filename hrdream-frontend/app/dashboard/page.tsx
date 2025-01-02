@@ -6,7 +6,7 @@ import ProfilePages from "@/components/profile/profileRight/page"
 export default function DashboardPage() {
     return (
 
-        <div className=" bg-white flex w-full h-screen">
+        <div className=" bg-white flex w-full">
             <ProfilePages />
             <ProfilePage/>
         </div>
