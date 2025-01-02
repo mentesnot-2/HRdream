@@ -8,7 +8,7 @@ export default function Header() {
         <div className="relative w-full bg-white">
             <div className="flex items-center justify-between py-3">
                 <div className="px-6 w-6/12">
-                    <div className="flex items-center w-full border rounded-md pl-4 ">
+                    <div className="flex items-center w-full border rounded-md pl-4 bg-zinc-50">
                         <input
                             type="text"
                             placeholder="Search"
