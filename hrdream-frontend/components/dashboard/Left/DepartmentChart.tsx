@@ -131,7 +131,7 @@ const DepartmentChart: React.FC<DepartmentChartProps> = ({ labels, data, colors 
     }, []);
 
     return (
-        <div className="relative h-36">
+        <div className="relative h-40">
             <Bar ref={chartRef} data={chartData} options={options} />
         </div>
     );
