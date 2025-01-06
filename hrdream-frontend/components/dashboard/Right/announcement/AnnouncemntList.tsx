@@ -42,10 +42,10 @@ const announcements:Announcement[] = [
 
 const AnnouncementList =() => {
     return (
-        <div className="w-full rounded-lg shadow-sm">
-            <div className="flex justify-between items-center mb-4">
+        <div className="w-full rounded-lg">
+            <div className="flex justify-between items-center mb-2">
                 <h1 className="text-lg font-bold text-gray-900">Announcement</h1>
-                <div className="text-sm text-gray-500">
+                <div className="text-sm text-gray-500 bg-blue-200 p-1 rounded-lg">
                     {new Date().toLocaleDateString("en-US", {
                         weekday: "long",
                         year: "numeric",

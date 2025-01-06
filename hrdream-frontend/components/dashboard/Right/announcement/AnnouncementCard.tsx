@@ -21,11 +21,13 @@ const AnnouncementCard: React.FC<AnnouncementCardProps> = ({ title, date, timeAg
                         src={pin}
                         alt="Clock"
                         width={20}
+                        className='cursor-pointer'
                     />
                     <Image
                         src={dot}
                         alt="Dot"
                         width={20}
+                        className='cursor-pointer'
                     />
                 </div>
             </div>

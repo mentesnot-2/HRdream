@@ -28,14 +28,14 @@ const activities: Activity[] = [
 
 const RecentActivity: React.FC = () => {
     return (
-        <div className="p-6 bg-blue-500 rounded-lg shadow-lg full">
-            <h2 className="text-lg font-bold text-white mb-4">
+        <div className="p-6 bg-blue-500 rounded-lg shadow-lg full py-4">
+            <h2 className="text-lg font-bold text-white mb-3">
                 Recent activity
             </h2>
-            <div className="space-y-6">
+            <div className="space-y-2">
                 {
                     activities.map((activity) => (
-                        <div key={activity.id} className='space-y-2'>
+                        <div key={activity.id}>
                             <div className="text-sm text-white">
                                 {activity.time}
                             </div>
@@ -45,7 +45,9 @@ const RecentActivity: React.FC = () => {
                             <p className='text-sm text-white'>
                                 {activity.description}
                             </p>
-                            <hr className="border-t border-blue-200" />
+                            {
+                                activity.id != activities.length && <hr className='border border-white my-4' />
+                            }
                         </div>
                     ))}
             </div>

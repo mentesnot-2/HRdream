@@ -18,6 +18,10 @@ const summaryCards = [
 const departments = ["Finance", "HR", "IT", "Marketing", "Design", "Management"];
 const employeeData = [7, 5, 6, 3, 10, 5]; // Mock employee data for the chart
 
+const qualityWorkflowData = [6, 5, 4]
+const qualityWorkflowLabels = ["Training effectiveness", "Satisfaction index", "Engagement index"];
+
+
 const DashboardLeft: React.FC = () => {
     return (
         <div className="p-6 bg-gray-50 min-h-screen space-y-6 w-7/12">
@@ -34,21 +38,27 @@ const DashboardLeft: React.FC = () => {
                 ))}
             </div>
             <div className="p-6 bg-white rounded-lg shadow-md">
-                <h3 className="text-lg font-bold text-gray-900 mb-4">Employees by department</h3>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Employees by department</h3>
                 <DepartmentChart labels={departments} data={employeeData} />
             </div>
 
-            {/* Summary Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {summaryCards.map((card) => (
-                    <SummaryCard
-                        key={card.id}
-                        id={card.id}
-                        label={card.label}
-                        value={card.value}
-                        description={card.description}
-                    />
-                ))}
+            <div>
+                <h3 className="text-lg font-bold text-gray-900 mb-4">Total Company Expenses</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {summaryCards.map((card) => (
+                        <SummaryCard
+                            key={card.id}
+                            id={card.id}
+                            label={card.label}
+                            value={card.value}
+                            description={card.description}
+                        />
+                    ))}
+                </div>
+            </div>
+            <div className="p-6 bg-white rounded-lg shadow-md">
+                <h3 className="text-lg font-bold text-gray-900 mb-4">Quality of Workflow</h3>
+                <DepartmentChart labels={qualityWorkflowLabels} data={qualityWorkflowData} />
             </div>
         </div>
     );
