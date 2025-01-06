@@ -1,0 +1,80 @@
+import React from "react";
+import AnnouncementCard from "./AnnouncementCard";
+
+
+
+interface Announcement {
+    id: number;
+    title: string;
+    date: string;
+    timeAgo: string;
+}
+
+
+const announcements:Announcement[] = [
+    {
+      id: 1,
+      title: "Outing schedule for every department",
+      date: "Monday, December 18, 2023",
+      timeAgo: "5 minutes ago",
+    },
+    {
+      id: 2,
+      title: "Meeting Design Department",
+      date: "Monday, December 18, 2023",
+      timeAgo: "5 minutes ago",
+    },
+    {
+      id: 3,
+      title: "Outing schedule for every department",
+      date: "Monday, December 18, 2023",
+      timeAgo: "5 minutes ago",
+    },
+    {
+      id: 4,
+      title: "Meeting HR Department",
+      date: "Monday, December 18, 2023",
+      timeAgo: "5 minutes ago",
+    },
+  ];
+
+
+
+const AnnouncementList =() => {
+    return (
+        <div className="w-full rounded-lg shadow-sm">
+            <div className="flex justify-between items-center mb-4">
+                <h1 className="text-lg font-bold text-gray-900">Announcement</h1>
+                <div className="text-sm text-gray-500">
+                    {new Date().toLocaleDateString("en-US", {
+                        weekday: "long",
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                    })}
+                </div>
+            </div>
+            <p className="text-sm text-gray-500 mb-4">
+                {announcements.length} active tasks
+            </p>
+            <div className="space-y-4">
+                {
+                    announcements.map((announcement) => (
+                        <AnnouncementCard
+                            key={announcement.id}
+                            title={announcement.title}
+                            date={announcement.date}
+                            timeAgo={announcement.timeAgo}
+                        />
+                    ))
+                }
+            </div>
+            <div className="text-center my-4">
+                <button className="text-blue-500 hover:text-blue-700">See all announcements</button>
+            </div>
+        </div>
+    )
+}
+
+
+export default AnnouncementList;

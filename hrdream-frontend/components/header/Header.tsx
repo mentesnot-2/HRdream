@@ -1,3 +1,5 @@
+import { MdOutlineMail } from "react-icons/md";
+import { IoMdNotificationsOutline } from "react-icons/io";
 
 
 
@@ -34,6 +36,12 @@ export default function Header() {
                 </div>
 
                 <div className="flex items-center space-x-2 cursor-pointer">
+                    <div>
+                        <MdOutlineMail className="w-6 h-6 text-gray-500 hover:text-gray-700" />
+                    </div>
+                    <div>
+                        <IoMdNotificationsOutline className="w-6 h-6 text-gray-500 hover:text-gray-700" />
+                    </div>
                     <div className="w-8 h-8 ">
                         <img
                             src="https://avatar.iran.liara.run/public/boy?username=Ash"
