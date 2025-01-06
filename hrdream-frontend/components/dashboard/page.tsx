@@ -1,3 +1,4 @@
+import React from 'react';
 import DashboardLeft from "./Left/page";
 import DashboardRight from "./Right/index";
 

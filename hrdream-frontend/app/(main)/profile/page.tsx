@@ -1,13 +1,12 @@
-import ProfilePageLeft from "@/components/profile/profileLeft/page";
-import ProfilePageRight from "@/components/profile/profileRight/page";
+import Spinner from "@/components/Spinner"
+import dynamic from "next/dynamic"
 
 
-
+const Profile = dynamic(() => import('@/components/profile/page'), {
+    loading: () => <Spinner />,
+})
 export default function ProfilePage() {
     return (
-        <div className=" bg-white flex w-full">
-            <ProfilePageLeft />
-            <ProfilePageRight />
-        </div>
+        <Profile/>
     )
 }
