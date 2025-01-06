@@ -5,7 +5,7 @@ import DashboardRight from "./Right/index";
 
 export default function Dashboard() {
     return (
-        <div className=" bg-white flex flex-row w-full">
+        <div className=" bg-white flex w-full">
             <DashboardLeft/>
             <DashboardRight/>
         </div>

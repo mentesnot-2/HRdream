@@ -4,6 +4,7 @@ import { IoMdNotificationsOutline } from "react-icons/io";
 
 
 import React from "react";
+import Link from "next/link";
 
 export default function Header() {
     return (
@@ -42,30 +43,35 @@ export default function Header() {
                     <div>
                         <IoMdNotificationsOutline className="w-6 h-6 text-gray-500 hover:text-gray-700" />
                     </div>
-                    <div className="w-8 h-8 ">
-                        <img
-                            src="https://avatar.iran.liara.run/public/boy?username=Ash"
-                            alt="Profile"
-                            className="rounded-full"
-                        />
-                    </div>
-                    <div className="text-sm font-medium text-gray-700">Admira Broom</div>
-                    <div className="text-gray-500 hover:text-gray-700">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            strokeWidth="2"
-                            stroke="currentColor"
-                            className="w-4 h-4"
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M19 9l-7 7-7-7"
+                    <Link
+                        href={`/profile`}
+                        className="flex items-center space-x-2 text-gray-500 hover:text-gray-700 gap-2"
+                    >
+                        <div className="w-8 h-8 ">
+                            <img
+                                src="https://avatar.iran.liara.run/public/boy?username=Ash"
+                                alt="Profile"
+                                className="rounded-full"
                             />
-                        </svg>
-                    </div>
+                        </div>
+                        <div className="text-sm font-medium text-gray-700">Admira Broom</div>
+                        <div className="text-gray-500 hover:text-gray-700">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                strokeWidth="2"
+                                stroke="currentColor"
+                                className="w-4 h-4"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    d="M19 9l-7 7-7-7"
+                                />
+                            </svg>
+                        </div>
+                    </Link>
                 </div>
             </div>
         </div>

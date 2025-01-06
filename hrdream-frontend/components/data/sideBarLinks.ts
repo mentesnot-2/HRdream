@@ -39,7 +39,7 @@ export const navLinks = [
 
 export const settingsLinks = [
     { 
-        href: "/settings", 
+        href: "/profile", 
         icon: React.createElement(IoSettingsOutline), 
         label: "Settings" 
     },
