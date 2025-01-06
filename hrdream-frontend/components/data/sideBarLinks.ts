@@ -16,22 +16,22 @@ export const navLinks = [
         label: "Dashboard" 
     },
     {
-        href: "/dashboard/applicant-tracker",
+        href: "/applicant-tracker",
         icon: React.createElement(TbReportAnalytics),
         label: "Applicant Tracker",
     },
     { 
-        href: "/dashboard/people", 
+        href: "/people", 
         icon: React.createElement(MdOutlinePeopleOutline), 
         label: "People" 
     },
     { 
-        href: "/dashboard/away", 
+        href: "/away", 
         icon: React.createElement(SiFuraffinity ), 
         label: "Away" 
     },
     { 
-        href: "/dashboard/reflect", 
+        href: "/reflect", 
         icon: React.createElement(BiReflectVertical ), 
         label: "Reflect" 
     },
@@ -44,7 +44,7 @@ export const settingsLinks = [
         label: "Settings" 
     },
     { 
-        href: "/logout", 
+        href: "/auth/logout", 
         icon: React.createElement(IoIosLogOut), 
         label: "Logout" 
     },

@@ -1,6 +1,5 @@
 import NavigationLink from "./NavigationLink";
 import { navLinks,settingsLinks } from "../data/sideBarLinks";
-import Header from "../header/Header";
 
 export default function LeftBar() {
   return (
