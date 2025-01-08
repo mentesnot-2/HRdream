@@ -1,10 +1,12 @@
+import React from 'react'
+import Spinner from '@/components/Spinner'
+import dynamic from 'next/dynamic'
 
-
-
-export default function ApplicantTracker() {
+const ApplicationTracker = dynamic(() => import('@/components/applicantTracker/page'), {
+    loading: () => <Spinner />,
+})
+export default function ApplicantTrackerPage() {
     return (
-        <div className=" bg-white flex w-full">
-            <h2>Applicant Tracker</h2>
-        </div>
+        <ApplicationTracker />
     )
 }
