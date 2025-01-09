@@ -18,7 +18,7 @@ const reports: Report[] = [
         role: "Strategist",
         score: 80,
         scoreColor: "bg-teal-500",
-        avatarUrl: "https://avatar.iran.liara.run/public/boy?username=George", // Replace with your avatar URL
+        avatarUrl: "https://avatar.iran.liara.run/public/boy?username=George",
     },
     {
         id: 2,
@@ -26,7 +26,7 @@ const reports: Report[] = [
         role: "Frontend Developer",
         score: 40,
         scoreColor: "bg-orange-400",
-        avatarUrl: "https://avatar.iran.liara.run/public/boy?username=Miley", // Replace with your avatar URL
+        avatarUrl: "https://avatar.iran.liara.run/public/boy?username=Miley",
     },
 ];
 

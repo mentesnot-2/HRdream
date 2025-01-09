@@ -9,11 +9,6 @@ interface RatingRow {
 
 const initialRatings: RatingRow[] = [
   {
-    label: "Fatigue and irritability",
-    selectedRating: 3,
-    colors:["bg-orange-200"]
-  },
-  {
     label: "Quality of work",
     selectedRating: 8,
     colors:["bg-cyan-100"]
@@ -27,6 +22,11 @@ const initialRatings: RatingRow[] = [
     label: "Absences",
     selectedRating: 4,
     colors:["bg-amber-100"]
+  },
+  {
+    label: "Fatigue and irritability",
+    selectedRating: 3,
+    colors:["bg-orange-200"]
   },
 ];
 

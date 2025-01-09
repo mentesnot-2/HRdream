@@ -21,12 +21,12 @@ const EmployeeWellnessChart: React.FC = () => {
         label: "Employees' wellness score",
         data: [20, 40, 25, 60, 90, 35],
         backgroundColor: [
-          "#60A5FA", // Light blue
-          "#34D399", // Light green
-          "#A78BFA", // Light purple
-          "#3B82F6", // Blue
-          "#22D3EE", // Cyan
-          "#818CF8", // Indigo
+          "#60A5FA",
+          "#34D399",
+          "#A78BFA",
+          "#3B82F6",
+          "#22D3EE",
+          "#818CF8",
         ],
         borderRadius: 8,
         barThickness: 15,
@@ -35,34 +35,37 @@ const EmployeeWellnessChart: React.FC = () => {
   };
 
   const options = {
-    indexAxis: "y" as const, // Makes the bars horizontal
+    indexAxis: "y" as const,
     responsive: true,
     plugins: {
       legend: {
-        display: false, // Hide the legend
+        display: false,
       },
       tooltip: {
-        enabled: true, // Enable tooltips
+        enabled: true,
       },
     },
     scales: {
       x: {
         beginAtZero: true,
-        max: 100, // Set maximum scale
+        max: 100,
       },
       y: {
         
         grid: {
-          display: false, // Hide gridlines on the y-axis
+          display: false,
         },
       },
     },
   };
 
   return (
-    <div className="p-4 bg-white rounded-lg shadow-md max-w-lg">
+    <div className="p-4 bg-white rounded-lg shadow-md w-4/5 items-center">
       <h2 className="text-lg font-semibold mb-4">Employees' wellness by department</h2>
-      <Bar data={data} options={options} />
+      <Bar data={data} options={options} style={{
+        width: "100%",
+        // height: "200px",
+      }}/>
     </div>
   );
 };
