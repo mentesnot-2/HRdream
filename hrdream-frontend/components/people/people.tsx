@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import filterIcon from "@/public/filter.svg"; // Replace with the path to your filter icon
+import filterIcon from "@/public/filter.svg";
 import FilterPanel from "@/components/people/peopleFIlterPanel";
 
 const peopleData = [
@@ -13,7 +13,7 @@ const peopleData = [
         location: "Madrid, Spain",
         time: "14:45",
         department: "People & Culture",
-        avatar: "https://avatar.iran.liara.run/public/boy?username=George", // Replace with avatar paths
+        avatar: "https://avatar.iran.liara.run/public/boy?username=George", 
     },
     {
         id: 2,
@@ -87,7 +87,7 @@ const PeopleList: React.FC = () => {
         const filtered = peopleData.filter((person) => person.department === selectedDepartment);
         setFilteredPeople(filtered);
         setIsFilterPanelVisible(false);
-        setCurrentPage(1); // Reset pagination
+        setCurrentPage(1);
     };
 
     const handleResetFilter = () => {
@@ -96,7 +96,7 @@ const PeopleList: React.FC = () => {
         setIsFilterPanelVisible(false);
     };
 
-    // Pagination logic
+    
     const totalPages = Math.ceil(filteredPeople.length / itemsPerPage);
     const startIndex = (currentPage - 1) * itemsPerPage;
     const currentPeople = filteredPeople.slice(startIndex, startIndex + itemsPerPage);
@@ -120,7 +120,7 @@ const PeopleList: React.FC = () => {
                 <hr className="" />
                 <div className="space-y-2">
                     {currentPeople.map((person) => (
-                        <>
+                        <div key={person.id}>
                             <div
                                 key={person.id}
                                 className="flex items-center justify-between p-3 pl-0 rounded-lg"
@@ -151,8 +151,8 @@ const PeopleList: React.FC = () => {
                                     </span>
                                 </div>
                             </div>
-                            <hr />
-                        </>
+                            <hr/>
+                        </div>
                     ))}
 
                 </div>

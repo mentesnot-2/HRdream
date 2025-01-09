@@ -8,10 +8,10 @@ export default {
   ],
   theme: {
     extend: {
-      // colors: {
-      //   background: "var(--background)",
-      //   foreground: "var(--foreground)",
-      // },
+      gridTemplateColumns: {
+        // Adds a custom class for 31 columns
+        '31': 'repeat(31, 1fr)',
+      },
     },
   },
   plugins: [],
