@@ -26,11 +26,6 @@ export const navLinks = [
         label: "People" 
     },
     { 
-        href: "/away", 
-        icon: React.createElement(SiFuraffinity ), 
-        label: "Away" 
-    },
-    { 
         href: "/reflect", 
         icon: React.createElement(BiReflectVertical ), 
         label: "Reflect" 
