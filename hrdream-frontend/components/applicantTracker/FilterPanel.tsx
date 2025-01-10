@@ -7,7 +7,7 @@ interface FilterPanelProps {
 const FilterPanel: React.FC<FilterPanelProps> = ({ onClose }) => {
   return (
     <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex justify-center items-center">
-      <div className="bg-white rounded-lg shadow-lg w-3/6 p-6">
+      <div className="bg-white rounded-lg shadow-lg w-3/6 p-6 max-sm:w-full max-sm:h-full">
         <h2 className="text-lg font-bold mb-4">Filter Applicants</h2>
         <form className="space-y-4">
           <div>

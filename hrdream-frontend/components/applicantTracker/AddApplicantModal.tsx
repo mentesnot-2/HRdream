@@ -32,7 +32,7 @@ const AddApplicantModal: React.FC<AddApplicantModalProps> = ({ onClose }) => {
 
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-            <div className="bg-white rounded-lg shadow-lg p-6 w-3/6">
+            <div className="bg-white rounded-lg shadow-lg p-6 w-3/6 max-sm:w-full max-sm:h-full">
                 <h2 className="text-lg font-bold mb-4">Add Applicant</h2>
                 <form onSubmit={handleSubmit} className="space-y-4">
                     <input

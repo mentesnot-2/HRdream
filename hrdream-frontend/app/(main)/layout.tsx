@@ -11,7 +11,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
     setIsSideBarOpen(!isSidebarOpen);
   }
   return (
-    <div className="flex h-screen">
+    <div className="flex h-screen max-sm:pl-0 max-sm:ml-0">
       <div className="hidden lg:block w-1/5 bg-gray-100">
         <LeftBar />
       </div>
