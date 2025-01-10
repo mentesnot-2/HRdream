@@ -3,7 +3,7 @@ import Task from "./Task/Task"
 
 export default function TaskCard() {
     return (
-        <div className="flex flex-col items-start justify-center w-full bg-white rounded-lg shadow-md mt-6 p-4">
+        <div className="flex flex-col items-start justify-center w-full bg-white rounded-lg shadow-md mt-6 p-4 max-sm:w-full">
             <div
                 className="flex flex-col items-start justify-center w-full h-2/4 text-black mb-4"
             >

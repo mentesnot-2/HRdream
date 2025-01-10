@@ -7,10 +7,10 @@ import eventsData from "@/components/data/upcomingTasks";
 
 export default function ProfilePageRight() {
     return (
-        <div className="bg-neutral-100 flex flex-col w-1/2">
+        <div className="bg-neutral-100 flex flex-col w-1/2 max-sm:w-full max-sm:pr-0 max-sm:mr-0">
             <div className="flex flex-col self-center">
                 <h1 className="py-4 text-lg font-bold">Quick Action</h1>
-                <div className="flex justify-end items-center gap-4">
+                <div className="flex justify-end items-center gap-4 max-sm:flex-col">
                     <QuickCardAction
                         title="Reflection time"
                         subtitle="10 questions"
