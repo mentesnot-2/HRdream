@@ -6,7 +6,7 @@ import RatingTable from './RatingRow';
 
 export default function ReflectPage() {
     return (
-        <div className=" bg-neutral-100 flex w-full p-6 flex-col ">
+        <div className=" bg-neutral-100 flex w-full p-6 flex-col max-sm:w-full max-sm:h-screen">
             <EmployeeWellnessChart />
             <LatestReports/>
             {/* <RatingTable/> */}

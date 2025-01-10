@@ -42,7 +42,7 @@ const RatingTable: React.FC = () => {
   };
 
   return (
-    <div className="p-4 rounded-lg max-w-4xl pt-0 pl-8">
+    <div className="p-4 rounded-lg max-w-4xl pt-0 pl-8 max-sm:hidden">
       <div className="flex">
         <div className="w-3/4">
           <ul>
