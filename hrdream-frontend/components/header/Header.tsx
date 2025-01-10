@@ -10,7 +10,7 @@ export default function Header() {
     return (
         <div className="relative w-full bg-white">
             <div className="flex items-center justify-between py-3">
-                <div className="px-6 w-6/12">
+                <div className="px-6 w-6/12 max-sm:w-full">
                     <div className="flex items-center w-full border rounded-md pl-4 bg-zinc-50">
                         <input
                             type="text"
@@ -36,7 +36,7 @@ export default function Header() {
                     </div>
                 </div>
 
-                <div className="flex items-center space-x-2 cursor-pointer">
+                <div className="flex items-center space-x-2 cursor-pointer max-sm:hidden">
                     <div>
                         <MdOutlineMail className="w-6 h-6 text-gray-500 hover:text-gray-700" />
                     </div>
