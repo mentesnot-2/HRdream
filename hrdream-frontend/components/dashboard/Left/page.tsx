@@ -24,7 +24,7 @@ const qualityWorkflowLabels = ["Training effectiveness", "Satisfaction index", "
 
 const DashboardLeft: React.FC = () => {
     return (
-        <div className="p-6 bg-gray-50 min-h-screen space-y-6 w-7/12">
+        <div className="p-6 bg-gray-50 min-h-screen space-y-6 w-7/12 max-sm:w-full">
             <h1 className="text-xl font-bold text-gray-900">Dashboard</h1>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {metrics.map((metric) => (
