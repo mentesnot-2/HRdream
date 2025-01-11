@@ -1,7 +1,6 @@
 import React from 'react';
 import EmployeeWellnessChart from './EmployeeWellnessChart';
 import LatestReports from './LatestReport';
-import RatingTable from './RatingRow';
 
 
 export default function ReflectPage() {
@@ -9,7 +8,6 @@ export default function ReflectPage() {
         <div className=" bg-neutral-100 flex w-full p-6 flex-col max-sm:w-full max-sm:h-screen">
             <EmployeeWellnessChart />
             <LatestReports/>
-            {/* <RatingTable/> */}
         </div>
     )
 }
