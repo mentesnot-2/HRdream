@@ -71,7 +71,52 @@ HRDream is a modern HR management platform developed to streamline applicant tra
 │   │   ├── AuthForm.tsx
 │   │   ├── VerifyEmail.tsx
 │   ├── dashboard
-│   │   └── Left.tsx
+│   │   └── Left
+│   │   |   ├── DepartmentChart.tsx
+│   │   |   ├── MetricsCard.tsx
+│   │   |   ├── Page.tsx
+│   │   |   ├── SummaryCard.tsx
+│   │   └── Right
+|   |   |   ├── announcement
+│   │   |      ├── AnnouncementCard.tsx
+│   │   |       ├── AnnouncementList.tsx
+│   │   |    ├── index.tsx
+│   │   |    ├── RecentActivity.tsx
+│   │   ├── page.tsx
+|   ├── header
+|   |   ├── Header.tsx
+|   ├── navbar
+|   |   ├── LeftBar.tsx
+|   |   ├── NavigationLink.tsx
+|   ├── People
+|   |   ├── people.tsx
+|   |    ├── peopleFilterPanel.tsx
+|   ├── profile
+|   |   ├── ProfileLeft
+|   |   |   ├── planCard
+|   |   |   |   ├── card.tsx
+|   |   |   ├── taskCard
+|   |   |   |   ├── Task
+|   |   |   |   |   ├── Task.tsx
+|   |   |   |   ├── TaskCard.tsx
+|   |   |   ├── Calendar.tsx
+|   |   |   ├── page.tsx
+|   |   |   ├── WorkingHoursChart.tsx
+|   |   ├── profileRight
+|   |   |   ├── quickActionCard
+|   |   |   |   ├── circularCard
+|   |   |   |   |   ├── circularCard.tsx
+|   |   |   |   ├── QuickActions.tsx
+|   |   |   ├── calendar.tsx
+|   |   |   ├── page.tsx
+|   |   |   ├── upComingEventCard.tsx
+|   |   ├── page.tsx
+|   ├── reflect
+|   |   ├── page.tsx
+|   |   ├── EmployeeWellnessChart.tsx
+|   |   ├── LatestReport.tsx
+|   |   ├── RatingRow.tsx
+|   ├── Spinner.tsx
 ├── public
 │   ├── favicon.ico
 ├── styles
