@@ -2,25 +2,7 @@ import React from "react";
 import MetricsCard from "./MetricsCard";
 import DepartmentChart from "./DepartmentChart";
 import SummaryCard from "./SummaryCard";
-
-// Mock data
-const metrics = [
-    { id: 1, label: "Absence rate", value: "9%", description: "vs. Previous month" },
-    { id: 2, label: "Absence cost", value: "$1,432", description: "vs. Previous month" },
-    { id: 3, label: "Unplanned absence", value: "12 days", description: "vs. Previous month" },
-];
-
-const summaryCards = [
-    { id: 1, label: "Total bonuses", value: "$34,566.23", description: "vs. Previous month" },
-    { id: 2, label: "Total commission", value: "$45,000.41", description: "vs. Previous month" },
-];
-
-const departments = ["Finance", "HR", "IT", "Marketing", "Design", "Management"];
-const employeeData = [7, 5, 6, 3, 10, 5]; // Mock employee data for the chart
-
-const qualityWorkflowData = [6, 5, 4]
-const qualityWorkflowLabels = ["Training effectiveness", "Satisfaction index", "Engagement index"];
-
+import { metrics,departments,employeeData,qualityWorkflowData,qualityWorkflowLabels,summaryCards } from "@/app/data/dashboardData";
 
 const DashboardLeft: React.FC = () => {
     return (

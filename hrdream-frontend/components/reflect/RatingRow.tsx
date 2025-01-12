@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import { initialRatings } from "@/app/data/ratings";
 
 interface RatingRow {
   label: string;
@@ -7,28 +8,6 @@ interface RatingRow {
   colors: string[];
 }
 
-const initialRatings: RatingRow[] = [
-  {
-    label: "Quality of work",
-    selectedRating: 8,
-    colors:["bg-cyan-100"]
-  },
-  {
-    label: "Time management",
-    selectedRating: 2,
-    colors:["bg-red-200"]
-  },
-  {
-    label: "Absences",
-    selectedRating: 4,
-    colors:["bg-amber-100"]
-  },
-  {
-    label: "Fatigue and irritability",
-    selectedRating: 3,
-    colors:["bg-orange-200"]
-  },
-];
 
 const RatingTable: React.FC = () => {
   const [ratings, setRatings] = useState<RatingRow[]>(initialRatings);

@@ -4,74 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import filterIcon from "@/public/filter.svg";
 import FilterPanel from "@/components/people/peopleFIlterPanel";
-
-const peopleData = [
-    {
-        id: 1,
-        name: "George Clooney",
-        role: "Strategist",
-        location: "Madrid, Spain",
-        time: "14:45",
-        department: "People & Culture",
-        avatar: "https://avatar.iran.liara.run/public/boy?username=George", 
-    },
-    {
-        id: 2,
-        name: "Miley Codus",
-        role: "Frontend developer",
-        location: "Dublin, Ireland",
-        time: "13:45",
-        department: "IT",
-        avatar: "https://avatar.iran.liara.run/public/boy?username=Miley",
-    },
-    {
-        id: 3,
-        name: "Sara Buyer",
-        role: "Social Media Specialist",
-        location: "Copenhagen, Denmark",
-        time: "14:45",
-        department: "Marketing",
-        avatar: "https://avatar.iran.liara.run/public/boy?username=Sara",
-    },
-    {
-        id: 4,
-        name: "Louis Blues",
-        role: "Senior Designer",
-        location: "Dublin, Ireland",
-        time: "13:45",
-        department: "Design",
-        avatar: "https://avatar.iran.liara.run/public/boy?username=Louis",
-    },
-    {
-        id: 5,
-        name: "Josh Hopkins",
-        role: "PR Manager",
-        location: "Dublin, Ireland",
-        time: "13:45",
-        department: "Management",
-        avatar: "https://avatar.iran.liara.run/public/boy?username=Josh",
-    },
-    {
-        id: 6,
-        name: "Jozef Fedor",
-        role: "Sales Manager",
-        location: "London, UK",
-        time: "13:45",
-        department: "Finance",
-        avatar: "https://avatar.iran.liara.run/public/boy?username=Jozef",
-    },
-    {
-        id: 7,
-        name: "Frederika Frederiksen",
-        role: "CEO",
-        location: "Berlin, Germany",
-        time: "14:45",
-        department: "People & Culture",
-        avatar: "https://avatar.iran.liara.run/public/boy?username=Frederika",
-    },
-];
-
-const departments = ["People & Culture", "IT", "Marketing", "Design", "Management", "Finance"];
+import { peopleData,departments } from "@/app/data/employeData";
 
 const PeopleList: React.FC = () => {
     const [isFilterPanelVisible, setIsFilterPanelVisible] = useState(false);
