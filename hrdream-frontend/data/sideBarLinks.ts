@@ -39,7 +39,7 @@ export const settingsLinks = [
         label: "Settings" 
     },
     { 
-        href: "/auth/logout", 
+        href: "/auth/sign-in", 
         icon: React.createElement(IoIosLogOut), 
         label: "Logout" 
     },

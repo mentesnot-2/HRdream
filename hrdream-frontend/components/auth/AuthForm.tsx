@@ -3,6 +3,7 @@ import google from '@/public/google.svg';
 import apple from '@/public/apple.svg';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
+import React from 'react';
 interface AuthFormProps {
     type: "sign-in" | "sign-up";
 }
@@ -10,7 +11,7 @@ interface AuthFormProps {
 export default function AuthForm({ type }: AuthFormProps) {
     const isSignIn = type === "sign-in";
     const router = useRouter();
-    const handleSignIn = (e: { preventDefault: () => void; }) => {
+    const handleSignIn = (e:React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault()
         router.push("/profile");
     }
