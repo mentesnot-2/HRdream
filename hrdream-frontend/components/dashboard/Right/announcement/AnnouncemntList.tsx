@@ -1,6 +1,6 @@
 import React from "react";
 import AnnouncementCard from "./AnnouncementCard";
-import { announcements } from "@/app/data/announcement";
+import { announcements } from "@/data/announcement";
 
 
 interface Announcement {
@@ -11,7 +11,7 @@ interface Announcement {
 }
 
 
-const AnnouncementList =() => {
+const AnnouncementList = () => {
     return (
         <div className="w-full rounded-lg">
             <div className="flex justify-between items-center mb-2">

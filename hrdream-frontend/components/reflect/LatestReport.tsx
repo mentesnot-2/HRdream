@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import RatingTable from "./RatingRow";
-import { reports } from "@/app/data/reports";
+import { reports } from "@/data/reports";
 
 interface Report {
     id: number;

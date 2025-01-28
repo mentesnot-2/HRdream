@@ -1,5 +1,5 @@
 import NavigationLink from "./NavigationLink";
-import { navLinks, settingsLinks } from "../../app/data/sideBarLinks";
+import { navLinks, settingsLinks } from "../../data/sideBarLinks";
 
 export default function LeftBar() {
   return (

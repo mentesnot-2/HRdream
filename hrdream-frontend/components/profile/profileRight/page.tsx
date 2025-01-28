@@ -2,7 +2,7 @@ import QuickCardAction from "./quickActionCard/QuickActions";
 import Image from "next/image";
 import Calendar from "./calendar";
 import UpcomingEventCard from "./upComingEventCard";
-import eventsData from "@/app/data/upcomingTasks";
+import eventsData from "@/data/upcomingTasks";
 
 
 export default function ProfilePageRight() {

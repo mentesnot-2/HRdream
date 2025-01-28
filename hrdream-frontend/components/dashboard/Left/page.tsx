@@ -2,7 +2,7 @@ import React from "react";
 import MetricsCard from "./MetricsCard";
 import DepartmentChart from "./DepartmentChart";
 import SummaryCard from "./SummaryCard";
-import { metrics,departments,employeeData,qualityWorkflowData,qualityWorkflowLabels,summaryCards } from "@/app/data/dashboardData";
+import { metrics, departments, employeeData, qualityWorkflowData, qualityWorkflowLabels, summaryCards } from "@/data/dashboardData";
 
 const DashboardLeft: React.FC = () => {
     return (

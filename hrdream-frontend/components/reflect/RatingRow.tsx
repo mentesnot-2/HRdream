@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { initialRatings } from "@/app/data/ratings";
+import { initialRatings } from "@/data/ratings";
 
 interface RatingRow {
   label: string;

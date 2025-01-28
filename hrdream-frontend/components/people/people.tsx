@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import filterIcon from "@/public/filter.svg";
 import FilterPanel from "@/components/people/peopleFIlterPanel";
-import { peopleData,departments } from "@/app/data/employeData";
+import { peopleData, departments } from "@/data/employeData";
 
 const PeopleList: React.FC = () => {
     const [isFilterPanelVisible, setIsFilterPanelVisible] = useState(false);
@@ -29,7 +29,7 @@ const PeopleList: React.FC = () => {
         setIsFilterPanelVisible(false);
     };
 
-    
+
     const totalPages = Math.ceil(filteredPeople.length / itemsPerPage);
     const startIndex = (currentPage - 1) * itemsPerPage;
     const currentPeople = filteredPeople.slice(startIndex, startIndex + itemsPerPage);
@@ -84,7 +84,7 @@ const PeopleList: React.FC = () => {
                                     </span>
                                 </div>
                             </div>
-                            <hr/>
+                            <hr />
                         </div>
                     ))}
 

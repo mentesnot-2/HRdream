@@ -1,13 +1,19 @@
+"use client"
 import google from '@/public/google.svg';
 import apple from '@/public/apple.svg';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 interface AuthFormProps {
     type: "sign-in" | "sign-up";
 }
 
 export default function AuthForm({ type }: AuthFormProps) {
     const isSignIn = type === "sign-in";
-
+    const router = useRouter();
+    const handleSignIn = (e: { preventDefault: () => void; }) => {
+        e.preventDefault()
+        router.push("/profile");
+    }
     return (
         <div className="w-full sm:w-2/3 flex flex-col bg-white pb-8">
             <p className="text-sm text-end p-8 ">
@@ -84,7 +90,7 @@ export default function AuthForm({ type }: AuthFormProps) {
                             />
                         </div>
                     )}
-                    <button className="bg-blue-500 text-white rounded px-4 py-2 w-full">
+                    <button className="bg-blue-500 text-white rounded px-4 py-2 w-full" onClick={handleSignIn}>
                         {isSignIn ? "Sign in" : "Create an account"}
                     </button>
                     <p 

@@ -7,7 +7,7 @@ import filter from "@/public/filter.svg";
 import Image from "next/image";
 import AddApplicantModal from "@/components/applicantTracker/AddApplicantModal";
 import FilterPanel from "@/components/applicantTracker/FilterPanel";
-import { applicantsData } from "@/app/data/applicantData";
+import { applicantsData } from "@/data/applicantData";
 
 const ApplicationTracker: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
