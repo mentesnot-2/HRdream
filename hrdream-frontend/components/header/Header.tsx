@@ -5,6 +5,7 @@ import { IoMdNotificationsOutline } from "react-icons/io";
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
     return (
@@ -48,7 +49,7 @@ export default function Header() {
                         className="flex items-center space-x-2 text-gray-500 hover:text-gray-700 gap-2"
                     >
                         <div className="w-8 h-8 ">
-                            <img
+                            <Image
                                 src="https://avatar.iran.liara.run/public/boy?username=Ash"
                                 alt="Profile"
                                 className="rounded-full"

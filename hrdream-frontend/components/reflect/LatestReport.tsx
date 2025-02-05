@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import RatingTable from "./RatingRow";
 import { reports } from "@/data/reports";
+import Image from "next/image";
 
 interface Report {
     id: number;
@@ -50,7 +51,7 @@ const LatestReports: React.FC = () => {
                                         />
                                     </svg>
                                 </div>
-                                <img
+                                <Image
                                     src={report.avatarUrl}
                                     alt={report.name}
                                     className="w-10 h-10 rounded-full"
