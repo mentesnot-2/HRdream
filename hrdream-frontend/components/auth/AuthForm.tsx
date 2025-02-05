@@ -37,10 +37,10 @@ export default function AuthForm({ type }: AuthFormProps) {
                 }
             </p>
             <div className="self-center w-3/6 sm:p-8">
-                <h2 className="text-2xl font-bold mb-4">
+                <h2 data-testid="auth-heading" className="text-2xl font-bold mb-4">
                     {isSignIn ? "Sign in" : "Sign up"}
                 </h2>
-                <p className="mb-8">
+                <p className="mb-8" data-testid="auth-subtext">
                     {
                         isSignIn ? "Sign in using your account with" : "Sign up with an already existing account"
                     }
@@ -91,7 +91,7 @@ export default function AuthForm({ type }: AuthFormProps) {
                             />
                         </div>
                     )}
-                    <button className="bg-blue-500 text-white rounded px-4 py-2 w-full" onClick={handleSignIn}>
+                    <button data-testid="auth-button" className="bg-blue-500 text-white rounded px-4 py-2 w-full" onClick={handleSignIn}>
                         {isSignIn ? "Sign in" : "Create an account"}
                     </button>
                     <p 
