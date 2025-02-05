@@ -37,7 +37,7 @@ const forBackground = [
 ]
 
 const DepartmentChart: React.FC<DepartmentChartProps> = ({ labels, data, colors }) => {
-    const chartRef = useRef<any>(null);
+    const chartRef = useRef<ChartJS<"bar"> | null>(null);
 
     const maxEmployees = 10;
 

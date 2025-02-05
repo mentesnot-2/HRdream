@@ -61,7 +61,7 @@ const EmployeeWellnessChart: React.FC = () => {
 
   return (
     <div className="p-4 bg-white rounded-lg shadow-md w-4/5 items-center max-sm:w-full">
-      <h2 className="text-lg font-semibold mb-4">Employees' wellness by department</h2>
+      <h2 className="text-lg font-semibold mb-4">Employees wellness by department</h2>
       <Bar data={data} options={options} style={{
         width: "100%",
       }}/>

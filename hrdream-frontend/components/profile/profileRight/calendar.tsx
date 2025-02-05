@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 
 const Calendar = () => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [currentDate, setCurrentDate] = useState(new Date());
     const [currentWeek, setCurrentWeek] = useState<(number | null)[]>([]);
 

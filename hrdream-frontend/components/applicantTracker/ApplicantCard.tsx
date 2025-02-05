@@ -6,11 +6,10 @@ interface ApplicantCardProps {
     location: string;
     position: string;
     department: string;
-    category: string;
 }
 
 
-const ApplicantCard: React.FC<ApplicantCardProps> = ({ name, email, location, position, department, category }) => {
+const ApplicantCard: React.FC<ApplicantCardProps> = ({ name, email, location, position, department}) => {
     return (
         <div className="p-4 bg-white shadow rounded-lg">
             <h3 className="text-bbase font-semibold text-gray-900">
