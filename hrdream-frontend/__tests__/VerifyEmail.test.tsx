@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import VerifyEmailForm from "@/components/auth/VerifyEmail";  // Adjust path as necessary
+import VerifyEmailForm from "@/components/auth/VerifyEmail"; 
 
 describe("VerifyEmailForm Component", () => {
     it("should render the form container", () => {
