@@ -11,10 +11,11 @@ export default function Task({title,dueDate}:Task) {
             <div className="flex items-center gap-2 max-sm:justify-between">
                 <div className="w-6 h-6 rounded-full bg-gray-300">
                     <Image
-                        src="https://avatar.iran.liara.run/public/boy?username=Ash"
+                        src="https://www.loremfaces.net/96/id/2.jpg/"
                         alt="profile"
                         width={24}
                         height={24}
+                        className="rounded-full object-cover"
                     />
                 </div>
                 <p className="text-sm text-gray-400">Admira</p>
