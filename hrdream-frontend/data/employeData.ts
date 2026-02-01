@@ -6,7 +6,7 @@ export const peopleData = [
         location: "Madrid, Spain",
         time: "14:45",
         department: "People & Culture",
-        avatar: "https://avatar.iran.liara.run/public/boy?username=George", 
+        avatar: "https://www.loremfaces.net/96/id/3.jpg/", 
     },
     {
         id: 2,
@@ -15,7 +15,7 @@ export const peopleData = [
         location: "Dublin, Ireland",
         time: "13:45",
         department: "IT",
-        avatar: "https://avatar.iran.liara.run/public/boy?username=Miley",
+        avatar: "https://www.loremfaces.net/96/id/4.jpg/",
     },
     {
         id: 3,
@@ -24,7 +24,7 @@ export const peopleData = [
         location: "Copenhagen, Denmark",
         time: "14:45",
         department: "Marketing",
-        avatar: "https://avatar.iran.liara.run/public/boy?username=Sara",
+        avatar: "https://www.loremfaces.net/96/id/5.jpg/",
     },
     {
         id: 4,

@@ -1,15 +1,21 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import Header from "@/components/header/Header";
 import LeftBar from "@/components/navbar/LeftBar";
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
   const [isSidebarOpen, setIsSideBarOpen] = useState(false);
+  const pathname = usePathname();
 
   const toggleSidebar = () => {
     setIsSideBarOpen(!isSidebarOpen);
-  }
+  };
+
+  useEffect(() => {
+    setIsSideBarOpen(false);
+  }, [pathname]);
   return (
     <div className="flex h-screen max-sm:pl-0 max-sm:ml-0">
       <div className="hidden lg:block w-1/5 bg-gray-100">
@@ -47,7 +53,9 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
           <div className="fixed inset-0 z-40 bg-black bg-opacity-50 lg:hidden"
           onClick={toggleSidebar}
           >
-            <div className="fixed top-0 left-0 z-50 w-4/5 max-w-xs bg-white h-full shadow-lg"
+            <div
+              className="fixed top-0 left-0 z-50 w-4/5 max-w-xs bg-white h-full shadow-lg"
+              onClick={(e) => e.stopPropagation()}
             >
               <LeftBar />
             </div>
