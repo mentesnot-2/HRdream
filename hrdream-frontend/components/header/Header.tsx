@@ -52,7 +52,8 @@ export default function Header() {
                             <Image
                                 src="https://avatar.iran.liara.run/public/boy?username=Ash"
                                 alt="Profile"
-                                className="rounded-full"
+                                fill
+                                className="rounded-full object-cover"
                             />
                         </div>
                         <div className="text-sm font-medium text-gray-700">Admira Broom</div>

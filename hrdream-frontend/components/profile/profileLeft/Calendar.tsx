@@ -14,6 +14,8 @@ const CalendarCard: React.FC<CalendarCardProps> = ({ title, icon, iconAlt }) => 
                 <Image
                     src={icon}
                     alt={iconAlt}
+                    width={24}
+                    height={24}
                     className="w-6 h-6"
                 />
             </div>
