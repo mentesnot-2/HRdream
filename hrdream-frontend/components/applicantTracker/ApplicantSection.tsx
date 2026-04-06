@@ -16,6 +16,10 @@ interface ApplicantSectionProps {
   applicants: Applicant[];
 }
 
+
+
+
+
 const ApplicantSection: React.FC<ApplicantSectionProps> = ({ title, applicants }) => {
   return (
     <div className="space-y-4 cursor-pointer">
