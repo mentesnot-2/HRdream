@@ -18,7 +18,8 @@ INSTALLED_APPS = [
     "rest_framework",
     "core",
     "organizations",
-    "directory"
+    "directory",
+    "django_stubs_ext",
 ]
 
 MIDDLEWARE = [
