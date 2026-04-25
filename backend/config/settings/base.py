@@ -3,6 +3,7 @@ Shared Django settings for all environments.
 """
 
 from pathlib import Path
+from datetime import timedelta
 
 # backend/ (folder that contains manage.py)
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
@@ -92,7 +93,21 @@ REST_FRAMEWORK = {
         "rest_framework.parsers.JSONParser",
     ],
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
-    "PAGE_SIZE": 20
+    "PAGE_SIZE": 20,
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "rest_framework_simplejwt.authentication.JWTAuthentication",
+    ],
+    "DEFAULT_PERMISSION_CLASSES": [
+        "rest_framework.permissions.IsAuthenticated",
+    ]
+}
+
+SIMPLE_JWT = {
+    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=30),
+    "REFRESH_TOKEN_LIFETIME": timedelta(days=7),
+    "ROTATE_REFRESH_TOKENS": True,
+    "BLACKLIST_AFTER_ROTATION": False,
+    "AUTH_HEADER_TYPES": ("Bearer",),
 }
 
 # --- CORS (browser calls from Next.js) ---
