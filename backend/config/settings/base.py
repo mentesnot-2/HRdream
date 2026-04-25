@@ -21,6 +21,7 @@ INSTALLED_APPS = [
     "organizations",
     "directory",
     "django_stubs_ext",
+    "accounts",
 ]
 
 MIDDLEWARE = [
