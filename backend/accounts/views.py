@@ -7,11 +7,16 @@ from rest_framework.response import Response
 @permission_classes([IsAuthenticated])
 def me(request):
     user = request.user
+    profile = getattr(user, "profile", None)
     return Response(
         {
             "id": user.id,
             "username": user.username,
             "email": user.email,
-            "is_staff": user.is_staff,
+            "organization":{
+                "id": profile.organization.id,
+                "name": profile.organization.name,
+                "slug": profile.organization.slug,
+            } if profile else None
         }
     )
