@@ -1,8 +1,10 @@
 from rest_framework import viewsets, filters
 from .models import Department, Employee
 from .serializers import DepartmentSerializer, EmployeeSerializer
+from rest_framework.permissions import IsAuthenticated
 
 class DepartmentViewSet(viewsets.ModelViewSet):
+    permission_classes = [IsAuthenticated]
     queryset = Department.objects.select_related("organization").all()
     serializer_class = DepartmentSerializer
     filter_backends = [filters.SearchFilter,filters.OrderingFilter]
@@ -12,6 +14,7 @@ class DepartmentViewSet(viewsets.ModelViewSet):
 
 
 class EmployeeViewSet(viewsets.ModelViewSet):
+    permission_classes = [IsAuthenticated]
     queryset = Employee.objects.select_related("organization","department").all()
     serializer_class = EmployeeSerializer
     filter_backends = [filters.SearchFilter,filters.OrderingFilter]
