@@ -22,6 +22,7 @@ INSTALLED_APPS = [
     "directory",
     "django_stubs_ext",
     "accounts",
+    "recruiting"
 ]
 
 MIDDLEWARE = [
