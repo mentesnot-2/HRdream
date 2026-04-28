@@ -14,7 +14,7 @@ class DepartmentSerializer(serializers.ModelSerializer):
             "created_at",
             "updated_at",
         ]
-        read_only_fields = ["id","organization_name","created_at","updated_at"]
+        read_only_fields = ["id","organization","created_at","updated_at"]
 
 
 class EmployeeSerializer(serializers.ModelSerializer):
@@ -36,4 +36,4 @@ class EmployeeSerializer(serializers.ModelSerializer):
             "updated_at",
         ]
 
-        read_only_fields = ["id","department_name","created_at","updated_at"]
+        read_only_fields = ["id","organization","department_name","created_at","updated_at"]
