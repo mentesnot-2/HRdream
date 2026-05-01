@@ -22,7 +22,8 @@ INSTALLED_APPS = [
     "directory",
     "django_stubs_ext",
     "accounts",
-    "recruiting"
+    "recruiting",
+    "drf_spectacular"
 ]
 
 MIDDLEWARE = [
@@ -101,7 +102,8 @@ REST_FRAMEWORK = {
     ],
     "DEFAULT_PERMISSION_CLASSES": [
         "rest_framework.permissions.IsAuthenticated",
-    ]
+    ],
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
 }
 
 SIMPLE_JWT = {
@@ -112,5 +114,11 @@ SIMPLE_JWT = {
     "AUTH_HEADER_TYPES": ("Bearer",),
 }
 
+SPECTACULAR_SETTINGS = {
+    "TITLE": "HRDream API",
+    "DESCRIPTION": "Backend API for HRDream (auth, directory, recruiting).",
+    "VERSION": "1.0.0",
+    "SERVE_INCLUDE_SCHEMA": False,
+}
 # --- CORS (browser calls from Next.js) ---
 CORS_ALLOW_CREDENTIALS = True
