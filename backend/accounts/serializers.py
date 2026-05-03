@@ -53,4 +53,10 @@ class RegisterSerializer(serializers.Serializer):
 
         return user
 
+class VerifyEmailRequestSerializer(serializers.Serializer):
+    email = serializers.EmailField()
 
+
+class VerifyEmailConfirmSerializer(serializers.Serializer):
+    token = serializers.CharField(max_length=128)
+    
