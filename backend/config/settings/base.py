@@ -23,7 +23,8 @@ INSTALLED_APPS = [
     "django_stubs_ext",
     "accounts",
     "recruiting",
-    "drf_spectacular"
+    "drf_spectacular",
+    "reporting"
 ]
 
 MIDDLEWARE = [
