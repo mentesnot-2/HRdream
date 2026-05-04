@@ -1,4 +1,5 @@
 from django.contrib.auth import get_user_model
+from django.contrib.auth.models import AbstractUser
 from django.contrib.auth.password_validation import validate_password
 from rest_framework import serializers
 
@@ -27,14 +28,19 @@ class RegisterSerializer(serializers.Serializer):
 
         return value
 
-    def create(self,validated_data):
-        org_slug = validated_data.pop("organization_slug","").strip()
+    def create(self, validated_data):
+        org_slug = validated_data.pop("organization_slug", "").strip()
 
-        user = User.objects.create_user(
+        UserModel = get_user_model()
+        if not issubclass(UserModel, AbstractUser):
+            raise serializers.ValidationError(
+                "AUTH_USER_MODEL must subclass AbstractUser to use create_user()."
+            )
+
+        user = UserModel.objects.create_user(
             username=validated_data["username"],
             email=validated_data["email"],
-            password=validated_data["password"]
-
+            password=validated_data["password"],
         )
 
         # org assignment policy for now
