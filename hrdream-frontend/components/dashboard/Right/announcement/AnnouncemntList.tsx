@@ -1,8 +1,7 @@
 "use client";
 
-import React, { useState,useEffect } from "react";
+import React from "react";
 import AnnouncementCard from "./AnnouncementCard";
-import { apiGet } from "@/lib/api";
 import type { DashboardOverview } from "@/types/dashboard";
 
 
@@ -34,46 +33,21 @@ function formatAnnouncementDate(iso: string): {date: string, timeAgo: string} {
 
 }
 
-const AnnouncementList = () => {
-    const [items, setItems] = useState<AnnouncementView[]>([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState<string | null>(null);
+type AnnouncementListProps = {
+    announcements: DashboardOverview["announcements"];
+};
 
-    useEffect(() => {
-        const run = async () => {
-            try {
-                setLoading(true)
-                setError(null)
-                
-                const data = await apiGet<DashboardOverview>("/api/v1/dashboard/overview")
+const AnnouncementList: React.FC<AnnouncementListProps> = ({ announcements }) => {
+    const mappedAnnouncements: AnnouncementView[] = announcements.map((item) => {
+        const { date, timeAgo } = formatAnnouncementDate(item.created_at);
+        return {
+            id: item.id,
+            title: item.title,
+            date,
+            timeAgo,
+        };
+    });
 
-                const mapped = data.announcements.map((item) => {
-                    const {date, timeAgo} = formatAnnouncementDate(item.created_at)
-                    return {
-                        id:item.id,
-                        title:item.title,
-                        date,
-                        timeAgo
-                    };
-                });
-                setItems(mapped);
-            } catch (err) {
-                const message = err instanceof Error ? err.message : "Failed to load announcements";
-                setError(message);
-            } finally {
-                setLoading(false);
-            }
-        }
-        void run()
-    },[]);
-
-    if (loading) {
-        return <p className="text-sm text-gray-500">Loading announcements...</p>;
-      }
-
-    if (error) {
-        return <div className="text-red-500">{error}</div>
-    }
     return (
         <div className="w-full rounded-lg">
             <div className="flex justify-between items-center mb-2">
@@ -88,11 +62,11 @@ const AnnouncementList = () => {
                 </div>
             </div>
             <p className="text-sm text-gray-500 mb-4">
-                {items.length} active announcements
+                {mappedAnnouncements.length} active announcements
             </p>
             <div className="space-y-4">
                 {
-                    items.map((announcement) => (
+                    mappedAnnouncements.map((announcement) => (
                         <AnnouncementCard
                             key={announcement.id}
                             title={announcement.title}
