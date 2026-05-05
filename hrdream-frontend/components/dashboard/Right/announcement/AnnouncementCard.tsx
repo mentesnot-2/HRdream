@@ -1,7 +1,5 @@
 import React from 'react'
 import Image from 'next/image';
-import pin from '@/public/pin.svg';
-import dot from '@/public/dot.svg';
 
 interface AnnouncementCardProps {
     title: string;
@@ -18,15 +16,17 @@ const AnnouncementCard: React.FC<AnnouncementCardProps> = ({ title, date, timeAg
 
                 <div className='flex gap-2'>
                     <Image
-                        src={pin}
+                        src="/pin.svg"
                         alt="Clock"
                         width={20}
+                        height={20}
                         className='cursor-pointer'
                     />
                     <Image
-                        src={dot}
+                        src="/dot.svg"
                         alt="Dot"
                         width={20}
+                        height={20}
                         className='cursor-pointer'
                     />
                 </div>
