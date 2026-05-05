@@ -9,7 +9,7 @@ export type DashboardCard = {
 export type DashboardOverview = {
     metrics:DashboardCard[];
     summary_cards: DashboardCard[];
-    department_cahrt: {
+    department_chart: {
         labels:string[];
         data:number[];
     };
@@ -21,6 +21,5 @@ export type DashboardOverview = {
         id:number;
         title:string;
         created_at:string;
-    }
-
+    }[];
 }
