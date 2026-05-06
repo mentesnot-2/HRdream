@@ -1,31 +1,32 @@
-import React from 'react';
+import React from "react";
+import type { NewApplicantInput } from "@/types/applicants";
 
 interface AddApplicantModalProps {
     onClose: () => void;
+    onCreated: (newApplicant: NewApplicantInput) => void;
 }
 
-const AddApplicantModal: React.FC<AddApplicantModalProps> = ({ onClose }) => {
-    const [formData, setFormData] = React.useState({
-        name: "",
+const AddApplicantModal: React.FC<AddApplicantModalProps> = ({ onClose, onCreated }) => {
+    const [formData, setFormData] = React.useState<NewApplicantInput>({
+        full_name: "",
         email: "",
         location: "",
         position: "",
         department: "",
-        category: ""
+        stage: "applied",
     });
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         const { name, value } = e.currentTarget;
         setFormData((prev) => ({
             ...prev,
-            [name]: value
+            [name]: value,
         }));
     };
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        console.log(formData);
-        onClose();
+        onCreated(formData);
     };
 
     return (
@@ -35,9 +36,9 @@ const AddApplicantModal: React.FC<AddApplicantModalProps> = ({ onClose }) => {
                 <form onSubmit={handleSubmit} className="space-y-4" data-testid="applicant-form">
                     <input
                         type="text"
-                        name="name"
+                        name="full_name"
                         placeholder="Full Name"
-                        value={formData.name}
+                        value={formData.full_name}
                         onChange={handleChange}
                         className="w-full p-2 border rounded"
                         required
@@ -83,16 +84,18 @@ const AddApplicantModal: React.FC<AddApplicantModalProps> = ({ onClose }) => {
                         required
                         data-testid="department-input"
                     />
-                    <input
-                        type="text"
-                        name="category"
-                        placeholder="Category"
-                        value={formData.category}
+                    <select
+                        name="stage"
+                        value={formData.stage}
                         onChange={handleChange}
                         className="w-full p-2 border rounded"
-                        required
-                        data-testid="category-input"
-                    />
+                        data-testid="stage-select"
+                    >
+                        <option value="applied">Applied</option>
+                        <option value="interviewed">Interviewed</option>
+                        <option value="made_offer">Made offer</option>
+                        <option value="hired">Hired</option>
+                    </select>
                     <div className="flex justify-end space-x-4">
                         <button
                             type="button"

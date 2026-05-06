@@ -1,19 +1,11 @@
 import React from "react";
 import ApplicantCard from "./ApplicantCard";
+import type { ApplicantApi } from "@/types/applicants";
 
-interface Applicant {
-  id: number;
-  name: string;
-  email: string;
-  location: string;
-  position: string;
-  department: string;
-  category: string;
-}
 
 interface ApplicantSectionProps {
   title: string;
-  applicants: Applicant[];
+  applicants: ApplicantApi[];
 }
 
 const ApplicantSection: React.FC<ApplicantSectionProps> = ({ title, applicants }) => {
@@ -22,7 +14,7 @@ const ApplicantSection: React.FC<ApplicantSectionProps> = ({ title, applicants }
       <h2 className="text-lg font-bold text-gray-900">{title}</h2>
       <div className="space-y-4">
         {applicants.map((applicant) => (
-          <ApplicantCard key={applicant.id} {...applicant} />
+          <ApplicantCard key={applicant.id} applicant={applicant} />
         ))}
       </div>
     </div>

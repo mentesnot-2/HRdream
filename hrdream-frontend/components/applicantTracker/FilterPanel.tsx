@@ -1,24 +1,50 @@
-import React from "react";
+import React,{useState} from "react";
 
+
+type FilterValues = {
+  location: string;
+  position: string;
+  department: string;
+}
 interface FilterPanelProps {
   onClose: () => void;
-  onSubmit?:(e:React.FormEvent<HTMLFormElement>) => void
+  onApply: (filters: FilterValues) => void;
+  onReset: () => void;
 }
 
-const FilterPanel: React.FC<FilterPanelProps> = ({ onClose,onSubmit }) => {
+const FilterPanel: React.FC<FilterPanelProps> = ({ onClose,onApply,onReset }) => {
+
+  const [values, setValues] = useState<FilterValues>({
+    location:"",
+    position:"",
+    department:"",
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const {name,value} = e.currentTarget;
+    setValues((prev) => ({...prev,[name]:value}))
+  }
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    onApply(values);
+  }
 
 
   return (
     <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex justify-center items-center" data-testid = "filter-panel">
       <div className="bg-white rounded-lg shadow-lg w-3/6 p-6 max-sm:w-full max-sm:h-full" data-testid = "filter-panel-content">
         <h2 className="text-lg font-bold mb-4" data-testid = "filter-title">Filter Applicants</h2>
-        <form className="space-y-4" data-testid = "filter-form" onSubmit={onSubmit}>
+        <form className="space-y-4" data-testid = "filter-form" onSubmit={handleSubmit}>
           <div data-testid = "filter-form-inputs">
             <label className="block text-sm font-medium text-gray-700" data-testid = "filter-form-label-location">
               Location
             </label>
             <input
               type="text"
+              name="location"
+              value={values.location}
+              onChange={handleChange}
               placeholder="Enter location"
               className="w-full p-2 border rounded"
               data-testid = "filter-form-input-location"
@@ -30,7 +56,10 @@ const FilterPanel: React.FC<FilterPanelProps> = ({ onClose,onSubmit }) => {
             </label>
             <input
               type="text"
-              placeholder="Enter position"
+              name="position"
+              value={values.position}
+              onChange={handleChange}
+                placeholder="Enter position"
               className="w-full p-2 border rounded"
               data-testid = "filter-form-input-position"
             />
@@ -41,6 +70,9 @@ const FilterPanel: React.FC<FilterPanelProps> = ({ onClose,onSubmit }) => {
             </label>
             <input
               type="text"
+              name="department"
+              value={values.department}
+              onChange={handleChange}
               placeholder="Enter department"
               className="w-full p-2 border rounded"
               data-testid = "filter-form-input-department"
