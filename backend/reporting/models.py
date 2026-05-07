@@ -1,5 +1,5 @@
 from django.db import models
-from organizations.models import Organization
+from organizations.models import Organization, TimeStampedModel
 
 
 class Announcement(TimeStampedModel):
@@ -11,7 +11,7 @@ class Announcement(TimeStampedModel):
     )
     title = models.CharField(max_length=255)
 
-    class Meta:
+    class Meta(TimeStampedModel.Meta):
         ordering = ["-created_at"]
 
     def __str__(self):
@@ -38,7 +38,7 @@ class DashboardStat(TimeStampedModel):
     sort_order = models.PositiveIntegerField(default=0)
 
 
-    class Meta:
+    class Meta(TimeStampedModel.Meta):
         ordering = ["category", "sort_order","id"]
         constraints = [
             models.UniqueConstraint(
