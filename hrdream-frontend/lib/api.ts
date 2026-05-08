@@ -17,3 +17,25 @@ export async function apiGet<T>(path:string, token?: string) : Promise<T> {
 
     return res.json() as Promise<T>;
 }
+
+export async function apiPatch<TResponse, TBody>(
+    path: string,
+    body: TBody,
+    token?: string
+  ): Promise<TResponse> {
+    const res = await fetch(`${API_BASE}${path}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+        ...(token ? { Authorization: `Bearer ${token}` } : {}),
+      },
+      body: JSON.stringify(body),
+      cache: "no-store",
+    });
+  
+    if (!res.ok) {
+      throw new Error(`API PATCH failed: ${res.status} ${res.statusText}`);
+    }
+  
+    return res.json() as Promise<TResponse>;
+  }
