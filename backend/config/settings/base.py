@@ -25,7 +25,8 @@ INSTALLED_APPS = [
     "recruiting",
     "drf_spectacular",
     "reporting",
-    "reflect"
+    "reflect",
+    "profiles"
 ]
 
 MIDDLEWARE = [
