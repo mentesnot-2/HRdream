@@ -10,7 +10,7 @@ export type UpcomingEventApi = {
     id: number;
     title: string;
     event_date: string;
-    event_time: string;
+    event_time: string | null;
     category: string;
 }
 
@@ -18,7 +18,7 @@ export type UpcomingEventApi = {
 export type UpcomingTaskApi = {
     id: number;
     title: string;
-    due_date: string;
+    due_date: string | null;
     status:"todo" | "in_progress" | "done";
     priority:"low" | "medium" | "high";
 };
@@ -28,7 +28,7 @@ export type UpcomingTaskApi = {
 export type UserSettingsApi = {
     theme: string;
     language: string;
-    notification_enabled: boolean;
+    notifications_enabled: boolean;
 }
 
 
