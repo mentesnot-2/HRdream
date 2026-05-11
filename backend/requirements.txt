@@ -24,3 +24,9 @@ types-PyYAML==6.0.12.20260408
 typing_extensions==4.15.0
 tzdata==2026.1
 uritemplate==4.2.0
+
+# --- Test & CI (pytest-django) ---
+pytest==8.3.5
+pytest-django==4.10.0
+pytest-cov==6.0.0
+factory-boy==3.3.3
