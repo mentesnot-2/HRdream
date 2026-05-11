@@ -1,7 +1,5 @@
 "use client"
-import google from '@/public/google.svg';
-import apple from '@/public/apple.svg';
-import Image from 'next/image';
+import Image from "next/image";
 import { useRouter } from 'next/navigation';
 import React from 'react';
 interface AuthFormProps {
@@ -48,18 +46,19 @@ export default function AuthForm({ type }: AuthFormProps) {
                 <div className="flex gap-4 mb-6 w-full">
                     <button className="bg-zinc-50 border border-gray-300 rounded px-4 py-2 w-full flex items-center justify-center gap-2">
                         <Image
-                            src={google}
+                            src="/google.svg"
                             alt="Google"
                             width={24}
+                            height={24}
                         />
                         Google
                     </button>
                     <button className="bg-zinc-50 border border-gray-300 rounded px-4 py-2 w-full flex items-center justify-center gap-2">
                         <Image
-                            src={apple}
+                            src="/apple.svg"
                             alt="Apple"
                             width={24}
-
+                            height={24}
                         />
                         Apple
                     </button>

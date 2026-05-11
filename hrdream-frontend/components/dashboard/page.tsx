@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useEffect ,useState} from 'react';
 import DashboardLeft from "./Left/page";
 import DashboardRight from "./Right/index";
