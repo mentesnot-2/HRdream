@@ -28,7 +28,7 @@ export type UpcomingTaskApi = {
 export type UserSettingsApi = {
     theme: string;
     language: string;
-    notifications_enabled: boolean;
+    notification_enabled: boolean;
 }
 
 
